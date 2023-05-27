@@ -1,3 +1,28 @@
+/* CUSTOM PROPERTIES */
+@font-face {
+    font-display: swap; 
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/montserrat-v25-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap; 
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/montserrat-v25-latin-700.woff2') format('woff2');
+}
+
+:root {
+    --brand-color: #6E728E;
+    --black: #4A4D60;
+    --white: #fff;
+    --blue: #6d72de;
+    --bg-color: #f7f7fe;
+}
+
 /* GLOBAL */
 html {
     box-sizing: border-box;
@@ -17,7 +42,7 @@ body {
     height: 100%;
     padding: 0;
     margin: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Montserrat', 'Arial', sans-serif;
     font-size: 16px;
     line-height: 1.5;
     color: #222;
@@ -44,4 +69,171 @@ img {
 /* MAIN CONTENT */
 .main-content {
     flex-grow: 1;
+    padding: 40px;
+    background-color: var(--bg-color);
+}
+
+/* PRICING CARD */
+.pricing-component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pricing-component-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 40px;
+    color: var(--brand-color);
+}
+
+/* PRICING TOGGLE */
+.pricing-toggle {
+    display: flex;
+    margin-bottom: 64px;
+}
+
+.pricing-toggle-text {
+    margin: 0;
+    font-size: 15px;
+    line-height: 28px;
+    color: var(--brand-color);
+    font-weight: 700;
+    opacity: 0.5;
+}
+
+.pricing-toggle-text:not(:last-child) {
+    margin-right: 24px;
+}
+
+.pricing-toggle-button {
+    display: flex;
+    padding: 4px;
+    border-radius: 16px;
+    background-image: linear-gradient(to right bottom, #a2a7f0, #696edd);
+    transition: opacity 0.3s ease;
+}
+
+.pricing-toggle-button:hover {
+    opacity: 0.5;
+}
+
+.pricing-toggle-button:not(:last-child) {
+    margin-right: 24px;
+}
+
+.pricing-toggle-link {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.pricing-toggle-link-active {
+    background-color: #fff;
+}
+
+/* PRICING CARDS */
+.pricing-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pricing-card {
+    padding: 30px;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pricing-card-title {
+    margin: 0;
+    margin-bottom: 24px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--brand-color);
+}
+
+.pricing-card-price {
+    display: flex;
+    margin: 0;
+    margin-bottom: 32px;
+    font-family: 'Montserrat';
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 71px;
+    color: var(--black);
+}
+
+.pricing-card-price-sign {
+    font-size: 40px;
+    line-height: auto;
+}
+
+.pricing-card-info-list {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 32px;
+    list-style: none;
+}
+
+.pricing-card-info-item {
+    padding: 12px;
+    font-size: 15px;
+    line-height: 28px;
+    font-weight: 700;
+    color: var(--brand-color);
+    border-top: 1px solid rgba(110, 114, 142, 0.25);
+}
+
+.pricing-card-info-item:last-child {
+    border-bottom: 1px solid rgba(110, 114, 142, 0.25);
+}
+
+.pricing-card-button {
+    padding: 14px 66px;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--white);
+    background-image: linear-gradient(to right bottom, #a2a7f0, #696edd);
+    transition: color 0.3s ease,
+        background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.pricing-card-button:hover {
+    --white: var(--brand-color);
+    border: 2px solid var(--brand-color);
+    background-image: none;
+    background-color: #fff;
+}
+
+.pricing-card-main {
+    --brand-color: #fff;
+    --black: #fff;
+    --white: var(--blue);
+    padding-top: 55px;
+    padding-bottom: 55px;
+    background-color: transparent;
+    background-image:  linear-gradient(to right bottom, #a2a7f0, #696edd);
+    border-radius: 10px;
+}
+
+.pricing-card-main .pricing-card-button {
+    background-color: #fff;
+    background-image: none;
+}
+
+.pricing-card-main .pricing-card-button:hover {
+    background-color: transparent;
 }
