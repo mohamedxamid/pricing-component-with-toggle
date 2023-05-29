@@ -150,47 +150,64 @@ img {
 }
 
 /* PRICING TOGGLE */
-.pricing-toggle {
-    display: flex;
+.pricing-switch {
     margin-bottom: 64px;
 }
 
-.pricing-toggle-text {
-    margin: 0;
+.switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.switch-label {
     font-size: 15px;
     line-height: 28px;
-    color: var(--brand-color);
-    opacity: 0.5;
+    color: rgba(110, 114, 142, 0.5);
+    cursor: pointer;
 }
 
-.pricing-toggle-text:not(:last-child) {
-    margin-right: 24px;
+.switch-label:hover {
+    color: #6e728e;
 }
 
-.pricing-toggle-button {
-    display: flex;
+.switch-control {
+    position: relative;
+    width: 56px;
+    height: 32px;
     padding: 4px;
-    border-radius: 16px;
-    background-image: linear-gradient(to right bottom, #a2a7f0, #696edd);
-    transition: opacity 0.3s ease;
-}
-
-.pricing-toggle-button:hover {
-    opacity: 0.5;
-}
-
-.pricing-toggle-button:not(:last-child) {
+    margin-left: 24px;
     margin-right: 24px;
+    border-radius: 16px;
+    background-color: #696EDD;
+    background-image: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);;
 }
 
-.pricing-toggle-link {
+.switch-circle {
     width: 24px;
     height: 24px;
     border-radius: 50%;
+    background-color: #fff;
+    transition: margin 0.2s ease;
 }
 
-.pricing-toggle-link-active {
-    background-color: #fff;
+.switch-control-annual,
+.switch-control-month {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.swith-input-annual:checked ~ .switch-control .switch-control-month,
+.swith-input-monthly:checked ~ .switch-control .switch-control-annual {
+    z-index: 5;
+}
+
+.swith-input-monthly:checked ~ .switch-control .switch-circle {
+    margin-left: 24px;
 }
 
 /* PRICING */
