@@ -180,7 +180,12 @@ img {
     margin-right: 24px;
     border-radius: 16px;
     background-color: #696EDD;
-    background-image: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);;
+    background-image: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
+    transition: opacity 0.4s ease;
+}
+
+.switch-control:hover {
+    opacity: 0.5;
 }
 
 .switch-circle {
