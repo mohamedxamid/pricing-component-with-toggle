@@ -302,3 +302,65 @@ img {
 .pricing-plan-best .pricing-plan-feature {
     border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
+
+@media only screen and (max-width: 1100px) {
+    .pricing-plan {
+        width: calc(100% / 3);
+    }
+
+    .pricing-plan-price {
+        font-size: 52px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .pricing-inner {
+        flex-wrap: wrap;
+    }
+
+    .pricing-plan {
+        max-width: calc(95% / 2);
+    }
+
+    .pricing-plan:nth-child(2n + 1) {
+        margin-right: 5%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    body {
+        background-image: url(../img/line-bg-right.svg);
+        background-position: left calc(50% + 196px) top -139px;
+    }
+
+    .page {
+        padding-top: 64px;
+    }
+
+    .pricing-switch {
+        margin-bottom: 80px;
+    }
+    
+    .pricing-inner {
+        flex-direction: column;
+    }
+
+    .pricing-plan {
+        width: 100%;
+        max-width: 100%;
+        padding: 31px 29px;
+        border-radius: 10px;
+    }
+
+    .pricing-plan:nth-child(2n + 1) {
+        margin-right: 0;
+    }
+
+    .pricing-plan:not(:last-child) {
+        margin-bottom: 32px;
+    }
+
+    .pricing-plan-best {
+        padding: 32px;
+    }
+}
